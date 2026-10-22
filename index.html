@@ -9,16 +9,32 @@
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start; /* Aligns content to the top for a cleaner app layout */
+            min-height: 100vh;
             margin: 0;
             background-color: #f4f4f9;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .calculator-container {
+            width: 95%; /* Makes the container occupy almost the full width of the screen */
+            max-width: 1400px; /* Prevents it from looking overly stretched on massive monitors */
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        iframe {
+            width: 100%; /* Tells the Excel calculator to fill the wide container completely */
+            border: none;
         }
     </style>
 </head>
 <body>
 
-        <iframe width="700" height="756" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/6bdd1348cf85595c/IQSFniMh5BB2QZgna2pnyN5RAQpi4NlZoXaqBoQbSemLPxw?wdAllowInteractivity=False&AllowTyping=True&Item=TripCalc&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+    <div class="calculator-container">
+        <iframe height="850" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/6bdd1348cf85595c/IQSFniMh5BB2QZgna2pnyN5RAQpi4NlZoXaqBoQbSemLPxw?wdAllowInteractivity=False&AllowTyping=True&Item=TripCalc&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+    </div>
     
 </body>
 </html>
